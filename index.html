@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Intro section with dropdown navigation</title>
+    
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="main-display" class="display">
+
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.svg" alt="snap">
+            </div>
+            <div id="tabsId" class="tabs">
+                <div class="close-mobile-menu">
+                    <img onclick="openMenu()" src="images/icon-close.svg" alt="close">
+                </div>
+
+                <ul>
+                    <li onclick="featuresDisp()" class="nav-features">
+                        <a href="#">Features
+                            <img id="downArrowFeat" class="down-arrow" src="images/icon-arrow-down.svg" alt="down">
+                            <img id="upArrowFeat" class="up-arrow" src="images/icon-arrow-up.svg" alt="down">
+                        </a>
+                        <ul id="nav-features" class="features-drop">
+                            <li>
+                                <a href="#">
+                                    <img src="images/icon-todo.svg" alt="todo">
+                                    History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/icon-calendar.svg" alt="calender">
+                                    Calendar
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/icon-reminders.svg" alt="reminder">
+                                    Reminders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/icon-planning.svg" alt="planning">
+                                    Planning
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li onclick="companyDisp()" class="nav-company">
+                        <a href="#">Company
+                            <img id="downArrowComp" class="down-arrow" src="images/icon-arrow-down.svg" alt="down">
+                            <img id="upArrowComp" class="up-arrow" src="images/icon-arrow-up.svg" alt="down">
+                        </a>
+                        <ul id="nav-company" class="company-drop">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#aboutId">About</a></li>
+                </ul>
+                <div class="account">
+                    <div class="login">Login</div>
+                    <div onclick="openPopup()" class="register">Register</div>
+                </div>
+            </div>
+            <div class="ham-menu">
+                <img onclick="openMenu()" src="images/icon-hamburger.svg" alt="menu">
+            </div>
+        </div>
+
+        <div class="center">
+            <div class="container">
+                <div class="details">
+
+                    <h1>Make</h1>
+                    <h1>remote work</h1>
+
+                    <p>
+                        Get your team in sync, no matter your location. Streamline processes, create team rituals, and
+                        watch productivity soar. Best for high productivity and excellent performance.
+                    </p>
+                    <div class="learn-btn">
+                        <div class="btn">
+                            <a href="#whyUs">
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="companies">
+                        <img src="images/client-databiz.svg" alt="databiz">
+                        <img src="images/client-audiophile.svg" alt="audiophile">
+                        <img src="images/client-meet.svg" alt="meet">
+                        <img src="images/client-maker.svg" alt="maker">
+                    </div>
+                </div>
+
+                <img class="desktop" src="images/image-hero-desktop.png" alt="image">
+                <img class="mobile" src="images/image-hero-mobile.png" alt="image">
+            </div>
+        </div>
+
+        <div class="subscription">
+
+            <h1 class="sub-title">Join us today</h1>
+            <p class="sub-info">With our wide range of services we can offer you with lots of tools and support to make
+                your work easier. Select appropriate plan as per your necessities and compatibility.</p>
+
+
+
+            <div class="sub-plans">
+
+                <div class="sub-box">
+                    <div class="basic subscription-card small-card">
+                        <div class="price">
+                            <h1>$0</h1>
+                            <p>per month</p>
+                            <h2>Basic</h2>
+                        </div>
+                        <div class="sub-features">
+                            <div class="points">
+                                <img src="images/tick.svg" alt=".">
+                                <p>Access over 50+ free tools</p>
+                            </div>
+                            <div class="points">
+                                <img src="images/cross.svg" alt=".">
+                                <p>Access to our member perks</p>
+                            </div>
+                            <div class="points">
+                                <img src="images/cross.svg" alt=".">
+                                <p>Access to exclusive group</p>
+                            </div>
+                        </div>
+                        <div class="join">
+                            Join Basic
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="sub-box">
+                    <div class="premium subscription-card large-card">
+                        <div class="price">
+                            <h1>$9</h1>
+                            <p>per month</p>
+                            <h2>Premium</h2>
+                        </div>
+                        <div class="sub-features">
+                            <div class="points">
+                                <img src="images/tick.svg" alt=".">
+                                <p>Access over 150+ free tools</p>
+                            </div>
+                            <div class="points">
+                                <img src="images/tick.svg" alt=".">
+                                <p>Access to our member perks</p>
+                            </div>
+                            <div class="points">
+                                <img src="images/cross.svg" alt=".">
+                                <p>Access to exclusive group</p>
+                            </div>
+                        </div>
+                        <div class="join">
+                            Join Premium
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-box">
+                    <div class="deluxe subscription-card small-card    ">
+                        <div class="price">
+                            <h1>$20</h1>
+                            <p>per month</p>
+                            <h2>Deluxe</h2>
+                        </div>
+                        <div class="sub-features">
+                            <div class="points">
+                                <img src="images/tick.svg" alt=".">
+                                <p>Access to all the free tools</p>
+                            </div>
+                            <div class="points">
+                                <img src="images/tick.svg" alt=".">
+                                <p>Techinal Support from our side</p>
+                            </div>
+                            <div class="points">
+                                <img src="images/tick.svg" alt=".">
+                                <p>Access to exclusive group</p>
+                            </div>
+                        </div>
+                        <div class="join">
+                            Join Deluxe
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="whyUs" class="whyus">
+            <div class="whyus-header">
+                <h1 class="whyus-title">
+                    Why to choose us ?
+                </h1>
+                <p class="whyus-reason">
+                    Our strong sense of identification with client projects means that we are constantly striving to
+                    provide solutions, even for issues they aren't yet aware of. To this end, we adopt a progressive
+                    approach to technology and marketing techniques.
+                </p>
+            </div>
+
+            <div class="whyus-left">
+                <img src="images/details.png" alt="">
+            </div>
+            <div class="whyus-right">
+                <div class="whyus-feature">
+                    <h2>
+                        Quick Search
+                    </h2>
+                    <p>
+                        Easily search our tools according to your content, category, web address, application, and more.
+                    </p>
+                </div>
+                <div class="whyus-feature">
+                    <h2>
+                        iCloud Sync
+                    </h2>
+                    <p>
+                        Instantly saves and syncs all your records and data across all your devices. Access them
+                        anywhere and anytime.
+                    </p>
+                </div>
+                <div class="whyus-feature">
+                    <h2>
+                        Complete History
+                    </h2>
+                    <p>
+                        Retrieve any log record from the first moment you started using the app.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="aboutId" class="about">
+            <h1 class="title">About us</h1>
+            <p class="info">
+                You don't need to outright say, “our mission is to reinovate management,” but you should convey the
+                mission of your business in your About Us copy. This is key for attracting talent, as well as leads that
+                have Corporate Social Responsibility (CSR) goals.
+            </p>
+
+            <div class="team-image">
+                <img src="images/Reinovating-future-white.png" alt="">
+            </div>
+
+            <h2>Something we are proud of</h2>
+            <div class="perks">
+                <div class="card">
+                    <div class="item item--1">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path fill="rgba(149,149,255,1)"
+                                d="M17 15.245v6.872a.5.5 0 0 1-.757.429L12 20l-4.243 2.546a.5.5 0 0 1-.757-.43v-6.87a8 8 0 1 1 10 0zm-8 1.173v3.05l3-1.8 3 1.8v-3.05A7.978 7.978 0 0 1 12 17a7.978 7.978 0 0 1-3-.582zM12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12z">
+                            </path>
+                        </svg>
+                        <span class="quantity"> 90+ </span>
+                        <span class="text text--1"> Features </span>
+                    </div>
+                    <div class="item item--2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
+                            <path
+                                d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z"
+                                fill="rgba(252,161,71,1)"></path>
+                        </svg> <span class="quantity"> 70+ </span>
+                        <span class="text text--2"> Equipments </span>
+                    </div>
+                    <div class="item item--3">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path fill="rgba(66,193,110,1)"
+                                d="M20.083 15.2l1.202.721a.5.5 0 0 1 0 .858l-8.77 5.262a1 1 0 0 1-1.03 0l-8.77-5.262a.5.5 0 0 1 0-.858l1.202-.721L12 20.05l8.083-4.85zm0-4.7l1.202.721a.5.5 0 0 1 0 .858L12 17.65l-9.285-5.571a.5.5 0 0 1 0-.858l1.202-.721L12 15.35l8.083-4.85zm-7.569-9.191l8.771 5.262a.5.5 0 0 1 0 .858L12 13 2.715 7.429a.5.5 0 0 1 0-.858l8.77-5.262a1 1 0 0 1 1.03 0zM12 3.332L5.887 7 12 10.668 18.113 7 12 3.332z">
+                            </path>
+                        </svg>
+                        <span class="quantity"> 150+ </span>
+                        <span class="text text--3"> Components </span>
+                    </div>
+                    <div class="item item--4">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path fill="rgba(220,91,183,1)"
+                                d="M12 20h8v2h-8C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10a9.956 9.956 0 0 1-2 6h-2.708A8 8 0 1 0 12 20zm0-10a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-4 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm8 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-4 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z">
+                            </path>
+                        </svg>
+                        <span class="quantity"> 30+ </span>
+                        <span class="text text--4"> Companies </span>
+                    </div>
+                </div>
+            </div>
+            <div class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat, minima odit tempora ducimus qui
+                nam quos magni, pariatur laudantium voluptatibus unde ut ad beatae omnis at alias deserunt nostrum modi
+                labore. Obcaecati earum adipisci porro molestias doloribus odit quibusdam error provident dignissimos? A
+                fugit ab facere quas suscipit qui quam sequi provident ut libero perferendis eum culpa, dolor eligendi
+                nemo alias veritatis quasi vitae quos. Magnam architecto accusamus consequatur laboriosam odio.
+                Quibusdam fugiat porro sit dolor temporibus impedit sint, incidunt commodi error odit adipisci
+                asperiores quo reprehenderit eum autem velit similique voluptas voluptatem consectetur. Sed possimus
+                voluptatum ullam mollitia ad incidunt at sapiente, doloribus fugiat suscipit repellat.
+            </div>
+        </div>
+
+        <div class="reviews">
+
+            <h1 class="review-title">
+                Know from our customers...
+            </h1>
+            <p class="review-info">
+                Our customers speak for us. They are the biggest proof of our efficiency and effectiveness. Read the reviews of millions of customers. We always work for the satisfaction of the customers. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem adipisci nisi possimus vitae eveniet. Reiciendis!
+            </p>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="customer-img">
+                                <img src="images/3.jpg" alt="">
+                            </div>
+                            <h1 class="reviewer-name">
+                                Andrew Tate
+                            </h1>
+                            <div class="review-feedback">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum corporis molestiae laborum vitae quasi. Vero mollitia ipsum deleniti quibusdam et, quo error quam nihil blanditiis, molestias vitae! Earum, sequi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="customer-img">
+                                <img src="images/21.jpg" alt="">
+                            </div>
+                            <h1 class="reviewer-name">
+                                Andrew Tate
+                            </h1>
+                            <div class="review-feedback">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum corporis molestiae laborum vitae quasi. Vero mollitia ipsum deleniti quibusdam et, quo error quam nihil blanditiis, molestias vitae! Earum, sequi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="customer-img">
+                                <img src="images/4.jpg" alt="">
+                            </div>
+                            <h1 class="reviewer-name">
+                                Andrew Tate
+                            </h1>
+                            <div class="review-feedback">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum corporis molestiae laborum vitae quasi. Vero mollitia ipsum deleniti quibusdam et, quo error quam nihil blanditiis, molestias vitae! Earum, sequi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="customer-img">
+                                <img src="images/6.jpg" alt="">
+                            </div>
+                            <h1 class="reviewer-name">
+                                Andrew Tate
+                            </h1>
+                            <div class="review-feedback">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum corporis molestiae laborum vitae quasi. Vero mollitia ipsum deleniti quibusdam et, quo error quam nihil blanditiis, molestias vitae! Earum, sequi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="customer-img">
+                                <img src="images/4.jpg" alt="">
+                            </div>
+                            <h1 class="reviewer-name">
+                                Andrew Tate
+                            </h1>
+                            <div class="review-feedback">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum corporis molestiae laborum vitae quasi. Vero mollitia ipsum deleniti quibusdam et, quo error quam nihil blanditiis, molestias vitae! Earum, sequi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="customer-img">
+                                <img src="images/21.jpg" alt="">
+                            </div>
+                            <h1 class="reviewer-name">
+                                Andrew Tate
+                            </h1>
+                            <div class="review-feedback">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum corporis molestiae laborum vitae quasi. Vero mollitia ipsum deleniti quibusdam et, quo error quam nihil blanditiis, molestias vitae! Earum, sequi.
+                                </p>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="customer-img">
+                                <img src="images/6.jpg" alt="">
+                            </div>
+                            <h1 class="reviewer-name">
+                                Andrew Tate
+                            </h1>
+                            <div class="review-feedback">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum corporis molestiae laborum vitae quasi. Vero mollitia ipsum deleniti quibusdam et, quo error quam nihil blanditiis, molestias vitae! Earum, sequi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="customer-img">
+                                <img src="images/21.jpg" alt="">
+                            </div>
+                            <h1 class="reviewer-name">
+                                Andrew Tate
+                            </h1>
+                            <div class="review-feedback">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum corporis molestiae laborum vitae quasi. Vero mollitia ipsum deleniti quibusdam et, quo error quam nihil blanditiis, molestias vitae! Earum, sequi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="customer-img">
+                                <img src="images/6.jpg" alt="">
+                            </div>
+                            <h1 class="reviewer-name">
+                                Andrew Tate
+                            </h1>
+                            <div class="review-feedback">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum corporis molestiae laborum vitae quasi. Vero mollitia ipsum deleniti quibusdam et, quo error quam nihil blanditiis, molestias vitae! Earum, sequi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-modify"></div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">products</a></li>
+                            <li><a href="#">reviews</a></li>
+                            <li><a href="#">order status</a></li>
+                            <li><a href="#">payment options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online shop</h4>
+                        <ul>
+                            <li><a href="#">tools</a></li>
+                            <li><a href="#">modules</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">kits</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>       
+        
+    </div>
+
+    <div id="darker-background" class="darken">
+    </div>
+
+    <div id="register-popup" class="register-popup">
+
+        <div class="reg-left">
+            <img src="images/image-hero-desktop.png" alt="">
+        </div>
+
+        <div class="reg-right">
+            <div class="reg-logo">
+                <img src="images/logo.svg" alt="">
+            </div>
+            <div class="reg-details">
+                <img src="images/icon-email.svg" alt="email">
+                <input type="text" placeholder="Enter email">
+                <img src="images/icon-username.svg" alt="email">
+                <input type="text" placeholder="Enter username">
+                <img src="images/icon-password.svg" alt="email">
+                <input type="password" placeholder="Enter password">
+            </div>
+            <div class="reg-btn">
+                <p>Register</p>
+            </div>
+
+            <div class="reg-login">
+                <p>Already a subscriber?</p>
+            </div>
+        </div>
+
+        <div class="close">
+            <img onclick="closePopup()" src="images/icon-close.svg" alt="close">
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
