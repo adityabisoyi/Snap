@@ -60,7 +60,8 @@
                         </ul>
                     </li>
                     <li onclick="companyDisp()" class="nav-company">
-                        <a href="#">Company
+                        <a href="#">
+                            Company
                             <img id="downArrowComp" class="down-arrow" src="images/icon-arrow-down.svg" alt="down">
                             <img id="upArrowComp" class="up-arrow" src="images/icon-arrow-up.svg" alt="down">
                         </a>
@@ -532,25 +533,46 @@
     </div>
 
     <div id="register-popup" class="register-popup">
-
+        
         <div class="reg-left">
             <img src="images/image-hero-desktop.png" alt="">
         </div>
-
+        
         <div class="reg-right">
             <div class="reg-logo">
                 <img src="images/logo.svg" alt="">
             </div>
+
             <div class="reg-details">
+
+                <img src="images/icon-username.svg" alt="name">
+                <input id="name" type="text" placeholder="Enter full name" onblur="valName()">
+                <img id="name-error-icon" class="reg-error-icon" src="images/icon-error.svg" alt="error">
+                <span id="name-error" class="reg-error-msg">Enter correct name</span>
+
                 <img src="images/icon-email.svg" alt="email">
-                <input type="text" placeholder="Enter email">
-                <img src="images/icon-username.svg" alt="email">
-                <input type="text" placeholder="Enter username">
+                <input id="email" type="text" placeholder="Enter email" onblur="valEmail()">
+                <img id="email-error-icon" class="reg-error-icon" src="images/icon-error.svg" alt="error">
+                <span id="email-error" class="reg-error-msg">Enter correct email</span>
+
+                <img src="images/icon-mobile.svg" alt="mobile">
+                <input id="mobile" type="number" placeholder="Enter mobile number" onblur="valMobile()">
+                <img id="mobile-error-icon" class="reg-error-icon" src="images/icon-error.svg" alt="error">
+                <span id="mobile-error" class="reg-error-msg">Enter 10-digit mobile number</span>
+                
                 <img src="images/icon-password.svg" alt="email">
-                <input type="password" placeholder="Enter password">
+                <input id="password" type="password" placeholder="Enter password (8-20)" onblur="valPassword()"">
+                <img id="password-error-icon" class="reg-error-icon" src="images/icon-error.svg" alt="error">
+                <span id="password-error" class="reg-error-msg">Enter valid password</span>
+                
+                <img src="images/icon-calender.svg" alt="email">
+                <input id="DOB" type="date" placeholder="Enter DOB" onblur="valDOB()">              
+                <img id="DOB-error-icon" class="reg-error-icon" src="images/icon-error.svg" alt="error">
+                <span id="DOB-error" class="reg-error-msg">Age must be above 18</span>
+
             </div>
             <div class="reg-btn">
-                <p>Register</p>
+                <p onclick="validate()">Register</p>
             </div>
 
             <div class="reg-login">
@@ -559,13 +581,14 @@
         </div>
 
         <div class="close">
-            <img onclick="closePopup()" src="images/icon-close.svg" alt="close">
+            <img onclick="closePopup(); resetError()" src="images/icon-close.svg" alt="close">
         </div>
 
     </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="JS/validation.js"></script>
 
 </body>
 
